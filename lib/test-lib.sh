@@ -39,18 +39,23 @@ test.sh(1) -- Test script
 ## OPTIONS
 
   \`-h, --help\`              display this message
+
   \`-V, --version\`           output version
+
   \`-f, --functionals\`       run functional tests
+
   \`-i, --integrations\`      run integration tests
 
 ## USAGE
 
   Follow sample test.sh script for getting options, and where add your tests
   
-  $ test.sh --functionals
+    $ test.sh --functionals
+
   runs functional tests and reports how many tests pass and how many tests fail
 
-  $ test.sh --integrations
+    $ test.sh --integrations
+
   runs integration tests and reports how many tests pass and how many tests fail
 
 ## AUTHOR
