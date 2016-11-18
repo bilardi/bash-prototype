@@ -29,4 +29,4 @@ Read the [guide](test.1.md).
 
 ## License
 
-This package is released under the MIT license.  See [[LICENSE]] for details.
+This package is released under the MIT license.  See [LICENSE](LICENSE) for details.
