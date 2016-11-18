@@ -10,9 +10,11 @@ If you have any problem, create an issue.
 
 The package is self-consistent, when you have installed on your device the git program
 - Test installation
+
     make test
 
 - Global installation
+
     make install
 
 ## Usage
@@ -22,9 +24,11 @@ Read the [guide](test.1.md).
 ## Dev
 
 - Create man (using [kapouer/ronnjs](https://github.com/kapouer/ronnjs))
+
     make man
 
 - Test integrations
+
     ./test.sh --integrations
 
 ## License
