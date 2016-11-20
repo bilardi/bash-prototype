@@ -1,0 +1,28 @@
+{
+    "name": "my-script",
+    "version": "0.0.1",
+    "description": "My script",
+    "keywords": ["git", "dependencies", "package", "tdd"],
+    "bugs": {"url": "http://github.com/bilardi/bash-prototype/issues"},
+    "license": "MIT",
+    "repository": {
+	"type": "git",
+	"url": "http://github.com/bilardi/bash-prototype"
+    },
+    "scripts": {
+	"test": "make test",
+	"start": "./my-script.sh",
+    },
+    "dependencies": {
+	"git": ">=1"
+    },
+    "devDependencies": {
+	"mlafeldt/Sharness": "*",
+	"bilardi/bashunit": "*"
+    },
+    "os": [ "linux" ],
+    "preferGlobal": false,
+    "contributors": [
+	{"name": "Alessandra Bilardi", "email": "alessandra.bilardi@gmail.com"}
+    ]
+}
