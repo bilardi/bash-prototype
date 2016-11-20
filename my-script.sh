@@ -9,7 +9,7 @@
 # This script contains the main functions for getting options and running something
 
 # initialize
-VERSION="0.0.1"
+VERSION="1.0.0"
 
 # functions
 

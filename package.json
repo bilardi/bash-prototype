@@ -1,6 +1,6 @@
 {
     "name": "my-script",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "My script",
     "keywords": ["git", "dependencies", "package", "tdd"],
     "bugs": {"url": "http://github.com/bilardi/bash-prototype/issues"},
