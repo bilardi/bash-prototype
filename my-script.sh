@@ -9,7 +9,7 @@
 # This script contains the main functions for getting options and running something
 
 # initialize
-VERSION="1.0.0"
+VERSION="1.1.0"
 
 # functions
 
@@ -73,29 +73,41 @@ Run the test bash units.
 EOF
 }
 
+# Run test units
+#
+# Returns:
+#   string: test results
 function functionalTests {
     integrations
+    # todo: to use directory and not single file
     echo "Test with Sharness"
+    cd test
+    bash sharness.test/functional.sh
     echo "Test with BashUnit"
+    bash bashunit.sh -t bashunit.test/functional.sh
 }
 
+# Load test units
+#
+# Returns:
+#   string: feedback
 function integrations {
-    if [ ! -d test ]; then
-	mkdir test
-    fi
     cd test
     if [ ! -d sharness ]; then
+	echo "Load Sharness"
 	git clone https://github.com/mlafeldt/Sharness.git sharness
-	cd sharness
-	make
-	make install
-	cd -
 	ln -s sharness/sharness.sh sharness.sh
 	ln -s sharness/test/Makefile Makefile
 	ln -s sharness/aggregate-results.sh aggregate-results.sh
+    else
+	echo "Sharness is already installed"
     fi
     if [ ! -d bashunit ]; then
+	echo "Load BashUnit"
 	git clone https://github.com/bilardi/bashunit bashunit
+	ln -s bashunit/bashunit.sh bashunit.sh
+    else
+	echo "BashUnit is already installed"
     fi
     cd ..
 }
