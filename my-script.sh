@@ -9,7 +9,7 @@
 # This script contains the main functions for getting options and running something
 
 # initialize
-VERSION="1.1.0"
+VERSION="1.1.1"
 
 # functions
 
@@ -60,7 +60,7 @@ Run the test bash units.
 
 ## REPORTING BUGS
 
-  https://github.com/bilardi/bashunit/issues
+  https://github.com/bilardi/bash-prototype/issues
 
 ## SEE ALSO
 

@@ -31,7 +31,7 @@ Run the test bash units.
 
 ## REPORTING BUGS
 
-  https://github.com/bilardi/bashunit/issues
+  https://github.com/bilardi/bash-prototype/issues
 
 ## SEE ALSO
 
