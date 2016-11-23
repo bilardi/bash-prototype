@@ -11,7 +11,7 @@ my-script.sh(1) -- Test library
 
   `-V, --version`           output version
 
-  `-f, --functionalTests`   run test with test bash units
+  `-f, --functional-tests`  run test with test bash units
 
   `-i, --integrations`      load the test bash units
 
