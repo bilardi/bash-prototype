@@ -84,6 +84,7 @@ function functionalTests {
     cd test
     echo "Test with BashUnit"
     bash bashunit.sh -t bashunit.test/functional.sh
+    cd ..
 }
 
 # Load test units
