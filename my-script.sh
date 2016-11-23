@@ -9,7 +9,7 @@
 # This script contains the main functions for getting options and running something
 
 # initialize
-VERSION="1.1.1"
+VERSION="1.1.2"
 
 # functions
 
@@ -40,7 +40,7 @@ my-script.sh(1) -- Test library
 
   \`-V, --version\`           output version
 
-  \`-f, --functionalTests\`   run test with test bash units
+  \`-f, --functional-tests\`  run test with test bash units
 
   \`-i, --integrations\`      load the test bash units
 
@@ -71,6 +71,7 @@ Run the test bash units.
   MIT (C) Copyright Alessandra Bilardi 2016
 
 EOF
+    exit 1
 }
 
 # Run test units
@@ -83,7 +84,6 @@ function functionalTests {
     cd test
     echo "Test with BashUnit"
     bash bashunit.sh -t bashunit.test/functional.sh
-    cd ..
 }
 
 # Load test units
@@ -110,7 +110,7 @@ fi
 ## get options of the script
 while true; do
     case "$1" in
-	-h | --help ) help; exit 1 ;;
+	-h | --help ) help ;;
 	-V | --version ) version; exit 1 ;;
 	-f | --functional-tests ) functionalTests ;;
 	-i | --integrations ) integrations ;;
