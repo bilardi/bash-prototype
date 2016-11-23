@@ -81,11 +81,12 @@ EOF
 function functionalTests {
     integrations
     # todo: to use directory and not single file
-    echo "Test with Sharness"
     cd test
+    echo "Test with Sharness"
     bash sharness.test/functional.sh
     echo "Test with BashUnit"
     bash bashunit.sh -t bashunit.test/functional.sh
+    cd ..
 }
 
 # Load test units
