@@ -80,11 +80,10 @@ EOF
 function functionalTests {
     integrations
     # todo: to use directory and not single file
-    echo "Test with Sharness"
     cd test
-    bash sharness.test/functional.sh
     echo "Test with BashUnit"
     bash bashunit.sh -t bashunit.test/functional.sh
+    cd ..
 }
 
 # Load test units
@@ -93,15 +92,6 @@ function functionalTests {
 #   string: feedback
 function integrations {
     cd test
-    if [ ! -d sharness ]; then
-	echo "Load Sharness"
-	git clone https://github.com/mlafeldt/Sharness.git sharness
-	ln -s sharness/sharness.sh sharness.sh
-	ln -s sharness/test/Makefile Makefile
-	ln -s sharness/aggregate-results.sh aggregate-results.sh
-    else
-	echo "Sharness is already installed"
-    fi
     if [ ! -d bashunit ]; then
 	echo "Load BashUnit"
 	git clone https://github.com/bilardi/bashunit bashunit
