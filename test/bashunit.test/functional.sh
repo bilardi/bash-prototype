@@ -9,9 +9,10 @@
 # This script contains the basic test of the my-script.
 
 # initialize
-PATH=".."
-BIN="$PATH/my-script.sh"
+BIN="../my-script.sh"
 
 # main
 assertLike "function version -V" "$(./$BIN -V)" "[0-9]+.[0-9]+.[0-9]+"
 assertLike "function version --version" "$(./$BIN --version)" "[0-9]+.[0-9]+.[0-9]+"
+assertLike "function version -h" "$(./$BIN -h | grep SYNOPSIS)" "SYNOPSIS"
+assertLike "function version --help" "$(./$BIN --help | grep SYNOPSIS)" "SYNOPSIS"
