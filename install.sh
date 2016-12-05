@@ -73,6 +73,8 @@ EOF
 function install {
     if [ ! -e test.sh ]; then
 	if [ ! -d test ]; then
+	    mkdir -p test/sharness.test
+	    echo "Create directory test/sharness.test"
 	    mkdir -p test/bashunit.test
 	    echo "Create directory test/bashunit.test"
 	fi
@@ -84,6 +86,7 @@ function install {
 	sed "s/$oldScript/$SCRIPT/" test/bash-prototype/Makefile > Makefile
 	cp test/bash-prototype/.gitignore .
 	sed "s/$oldScript/$SCRIPT/" test/bash-prototype/test/bashunit.test/functional.sh > test/bashunit.test/functional.sh
+	sed "s/$oldScript/$SCRIPT/" test/bash-prototype/test/sharness.test/functional.sh > test/sharness.test/functional.sh
 	echo "Update files"
     fi
 }

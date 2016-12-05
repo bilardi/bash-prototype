@@ -8,3 +8,5 @@ test:
 
 man:
 	./$(BIN).sh -h > $(BIN).1.md; test true
+
+.PHONY: test man

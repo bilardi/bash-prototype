@@ -11,7 +11,7 @@ The package is not self-consistent: add the script where you want and run the te
 
 Or if you want to use it as the prototype / base of your script, 
 
-    curl -o https://raw.githubusercontent.com/bilardi/bash-prototype/master/install.sh
+    curl https://raw.githubusercontent.com/bilardi/bash-prototype/master/install.sh -o install.sh
    
     bash install.sh -s name-of-your-script
 
@@ -22,7 +22,7 @@ It installs .gitignore, Makefile and test.sh in '.' directory, [bilardi/bashunit
 Read the [guide](my-script.1.md).
 If you installed it as the prototype / base of your script,
 
-   bash test.sh --functional-tests
+    bash test.sh --functional-tests
 
 ## Development
 
